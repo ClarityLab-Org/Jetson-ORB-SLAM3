@@ -1,0 +1,17 @@
+method: kiss-slam (loop closure + pose graph)
+topic: /lidar_points
+frame: hesai_lidar
+scans: 3553
+points_per_scan_median: 62934
+per_point_time_field: timestamp
+deskew: True
+max_range: 40.0
+min_range: 1.0
+voxel_size: 0.400
+split_dist_m: 10.0
+map_voxel: 0.250
+closures: 0
+path_length_m: 69.41
+end_to_start_m: 4.695
+z_range_m: 3.212
+runtime_s: 44

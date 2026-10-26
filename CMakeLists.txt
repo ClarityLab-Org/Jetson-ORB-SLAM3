@@ -221,6 +221,12 @@ if(realsense2_FOUND)
     add_executable(stereo_realsense_D435i
             Examples/Stereo/stereo_realsense_D435i.cc)
     target_link_libraries(stereo_realsense_D435i ${PROJECT_NAME})
+
+    # Rover driver (plan/stage1.md, 4.4): copy of stereo_realsense_D435i with clean exit,
+    # saved trajectories and an events log. Uses the library unchanged.
+    add_executable(stereo_realsense_D435_rover
+            Examples/Stereo/stereo_realsense_D435_rover.cc)
+    target_link_libraries(stereo_realsense_D435_rover ${PROJECT_NAME})
 endif()
 
 #Monocular examples

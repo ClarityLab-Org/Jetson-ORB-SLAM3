@@ -1,0 +1,12 @@
+topic: /lidar_points
+frame: hesai_lidar
+scans: 3553
+points_per_scan_median: 62934
+per_point_time_field: timestamp
+deskew: True
+max_range: 40.0
+min_range: 1.0
+voxel_size: 0.400
+path_length_m: 70.17
+end_to_start_m: 4.699
+runtime_s: 40

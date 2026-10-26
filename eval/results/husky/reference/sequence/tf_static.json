@@ -1,0 +1,362 @@
+[
+ {
+  "parent": "base_link",
+  "child": "base_footprint",
+  "t": [
+   0.0,
+   0.0,
+   -0.13228
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "camera_link",
+  "child": "camera_color_optical_frame",
+  "t": [
+   0.02,
+   0.0175,
+   0.0
+  ],
+  "q_xyzw": [
+   -0.4999999999966269,
+   0.5000018366025517,
+   -0.4999999999966269,
+   0.49999816339744835
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "camera_link",
+  "t": [
+   0.32337,
+   0.00645,
+   0.38869
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "default_mount",
+  "t": [
+   0.0,
+   0.0,
+   0.224
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "front_bumper_mount",
+  "t": [
+   0.406,
+   0.0,
+   0.091
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "lidar_base",
+  "child": "hesai_lidar",
+  "t": [
+   0.0,
+   0.0,
+   0.0464
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   -0.7070727237014777,
+   0.7071408370313327
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "imu_0_link",
+  "t": [
+   0.06,
+   0.0,
+   0.16
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "inertial_link",
+  "t": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "lidar2d_0_link",
+  "t": [
+   0.3018,
+   0.0,
+   0.20395
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "lidar2d_0_link",
+  "child": "laser_frame",
+  "t": [
+   0.0,
+   0.0,
+   0.0474
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "lidar_base_mount",
+  "child": "lidar_base",
+  "t": [
+   -0.02,
+   0.0,
+   0.167
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "lidar_base_mount",
+  "t": [
+   0.28068,
+   -0.00325,
+   0.245
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "rear_bumper_mount",
+  "t": [
+   -0.406,
+   0.0,
+   0.091
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.9999999999991198,
+   1.3267948966775328e-06
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "top_chassis_link",
+  "t": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "base_link",
+  "child": "top_plate_custom_link",
+  "t": [
+   0.0,
+   0.0,
+   0.245
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "camera_link",
+  "child": "camera_infra1_frame",
+  "t": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "camera_aligned_depth_to_infra1_frame",
+  "child": "camera_infra1_optical_frame",
+  "t": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "q_xyzw": [
+   -0.5,
+   0.4999999999999999,
+   -0.5,
+   0.5000000000000001
+  ]
+ },
+ {
+  "parent": "camera_link",
+  "child": "camera_aligned_depth_to_infra1_frame",
+  "t": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "camera_link",
+  "child": "camera_infra2_frame",
+  "t": [
+   0.0,
+   -0.0498603954911232,
+   -0.0
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "camera_infra2_frame",
+  "child": "camera_infra2_optical_frame",
+  "t": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "q_xyzw": [
+   -0.5,
+   0.4999999999999999,
+   -0.5,
+   0.5000000000000001
+  ]
+ },
+ {
+  "parent": "camera_link",
+  "child": "camera_depth_frame",
+  "t": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "q_xyzw": [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "parent": "camera_depth_frame",
+  "child": "camera_depth_optical_frame",
+  "t": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "q_xyzw": [
+   -0.5,
+   0.4999999999999999,
+   -0.5,
+   0.5000000000000001
+  ]
+ },
+ {
+  "parent": "camera_link",
+  "child": "camera_color_frame",
+  "t": [
+   -0.00031667048460803926,
+   0.01474829576909542,
+   -7.311529043363407e-05
+  ],
+  "q_xyzw": [
+   0.009417848661541939,
+   0.000679423043038696,
+   0.000750698265619576,
+   0.9999551177024841
+  ]
+ },
+ {
+  "parent": "camera_color_frame",
+  "child": "camera_color_optical_frame",
+  "t": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "q_xyzw": [
+   -0.5,
+   0.4999999999999999,
+   -0.5,
+   0.5000000000000001
+  ]
+ }
+]

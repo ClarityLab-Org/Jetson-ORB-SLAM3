@@ -1,0 +1,102 @@
+{
+ "method": "GTSAM factor graph: KISS-ICP lidar odometry + lidar loop closures + IMU preintegration + wheel odometry + IMU roll/pitch",
+ "frame": "base_link",
+ "scans": 3553,
+ "keyframes": 132,
+ "imu_factors": false,
+ "wheel_factors": 3550,
+ "attitude_factors": 0,
+ "loop_factors": 2,
+ "magnetometer": "excluded: |B| varies 28% over the run",
+ "imu_driver_orientation": "driver orientation vs accelerometer gravity at rest: 84.5 deg -> EXCLUDED (inconsistent convention)",
+ "wheel_scale_applied": 0.9564027715857593,
+ "extrinsic_checks": {
+  "lidar_yaw": {
+   "lidar_travel_m": 2.832378545930508,
+   "wheel_travel_m": 3.000105545206807,
+   "yaw_correction_deg": 179.6105677901836,
+   "scans_used": 181,
+   "applied": true
+  },
+  "imu_axes": {
+   "yaw_rate_corr": 0.9908049123859891,
+   "fwd_acc_corr": 0.06390492289527984
+  }
+ },
+ "T_base_lidar_used": [
+  [
+   0.00670049734037334,
+   -0.9999775514157263,
+   0.0,
+   0.26067999999999997
+  ],
+  [
+   0.9999775514157263,
+   0.00670049734037334,
+   0.0,
+   -0.00325
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   0.45840000000000003
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "T_base_imu_used": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   0.06
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   0.16
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "validation_only": "/platform/odom/filtered, /tf odom->base_link, /imu/rpy, /platform/joint_states",
+ "camera_topics_read": "none",
+ "path_length_m": 66.983185754103,
+ "end_to_start_m": 3.6908912313256996,
+ "z_range_m": 1.6368875901454811,
+ "fused_vs_frontend_max_shift_m": 2.467836956351322,
+ "loop_fitness_after_fusion_median": 0.3713132379505461,
+ "loop_rmse_after_fusion_median_m": 0.10141066129719056,
+ "graph_error_initial": 123.1544855210562,
+ "graph_error_final": 114.72019692866725,
+ "rest_end_s": 2.534656449,
+ "gyro_bias_rest": [
+  -0.0014686879304489616,
+  -0.002169317933959228,
+  0.0004809575351593003
+ ],
+ "acc_rest_norm": 9.5781374900387,
+ "scan_time_minus_header_ms_median": 49.902839,
+ "kiss_voxel_m": 0.4,
+ "range_m": [
+  1.0,
+  40.0
+ ],
+ "runtime_s": 41.44446063041687
+}

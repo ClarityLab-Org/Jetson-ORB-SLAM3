@@ -1,0 +1,5 @@
+prior     n=    3  error mean 0.229  median 0.163  p95 0.374  max 0.397
+imu       n= 3552  error mean 0.005  median 0.003  p95 0.015  max 0.070
+lidar     n= 3552  error mean 0.051  median 0.037  p95 0.142  max 0.562
+wheel     n= 3550  error mean 0.022  median 0.015  p95 0.062  max 0.102
+loop      n=    2  error mean 0.159  median 0.159  p95 0.174  max 0.176

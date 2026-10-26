@@ -1,0 +1,4 @@
+frame: base_link
+method: GTSAM factor graph: KISS-ICP lidar odometry + lidar loop closures + IMU preintegration + wheel odometry + IMU roll/pitch
+scans: 3553
+path_length_m: 66.98

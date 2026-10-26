@@ -1,0 +1,19 @@
+source_bag: /home/shiv/datasets/external_raw/husky_20261023
+left: /camera/infra1/image_rect_raw
+right: /camera/infra2/image_rect_raw
+pairs: 5326
+unmatched_left_at_end: 0
+unmatched_right_at_end: 0
+duration_s: 355.229
+fps_median: 14.991
+max_gap_s: 0.067
+gaps_over_2x: 0
+baseline_m: 0.04986
+resolution: 640x480
+gt_file: gt.csv
+gt_poses: 5324
+gt_skipped_images: 2
+gt_coverage_pct: 100.0
+gt_time_offset_ms: 0.0
+gt_lever_arm: True
+T_lidar_cam_t: [0.3234, 0.0064, 0.3887]

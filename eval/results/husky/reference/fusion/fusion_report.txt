@@ -1,0 +1,78 @@
+== reading IMU, wheel odometry, magnetometer, validation odometry, static TF
+   lidar frame hesai_lidar  T_base_lidar t=[0.2607, -0.0032, 0.4584]
+   imu frame imu_0_link    T_base_imu t=[0.06, 0.0, 0.16]
+   imu 34083 samples, wheel 9936, mag 34084, filtered 17086
+   rest 0-2.5 s: gyro bias [-0.00147, -0.00217, 0.00048] rad/s, |acc| 9.578 (gravity present), noise density gyro 3.87e-04 acc 5.93e-03
+   magnetometer: |B| varies 28% over the run -> EXCLUDED (distorted field)
+   lidar yaw check: lidar 2.83 m vs wheels 3.00 m of travel, TF yaw off by 179.6 deg -> CORRECTED (yaw applied about base z; TF translation kept)
+   IMU axis check vs wheels: yaw-rate corr 0.99, forward-acc corr 0.06 (both should be > 0)
+== lidar front end (3553 scans, voxel 0.40 m, range 1.0-40.0 m)
+   scan 0/3553  pts 63116  travel 0.0 m  keyframes 1
+   scan 250/3553  pts 62948  travel 4.4 m  keyframes 9
+   scan 500/3553  pts 62508  travel 9.3 m  keyframes 18
+   scan 750/3553  pts 62938  travel 14.2 m  keyframes 27
+   scan 1000/3553  pts 63014  travel 19.0 m  keyframes 36
+   scan 1250/3553  pts 62974  travel 23.9 m  keyframes 45
+   scan 1500/3553  pts 63022  travel 28.7 m  keyframes 54
+   scan 1750/3553  pts 62772  travel 33.7 m  keyframes 65
+   scan 2000/3553  pts 62556  travel 38.5 m  keyframes 75
+   scan 2250/3553  pts 61088  travel 43.3 m  keyframes 84
+   scan 2500/3553  pts 62534  travel 48.1 m  keyframes 93
+   scan 2750/3553  pts 62616  travel 53.0 m  keyframes 102
+   scan 3000/3553  pts 63086  travel 57.9 m  keyframes 112
+   scan 3250/3553  pts 63162  travel 63.0 m  keyframes 121
+   scan 3500/3553  pts 63200  travel 67.8 m  keyframes 130
+   3553 scans, 132 keyframes, lidar travel 68.8 m; scan time - header stamp: median 49.9 ms
+   wheel scale vs lidar: median 0.9564 over 176 windows (IQR 0.9413-0.9760) -> applied 0.9564
+   driver orientation vs accelerometer gravity at rest: 84.5 deg -> EXCLUDED (inconsistent convention)
+== factor graph pass 1 (no loops): states 3553; factors {'prior': 3, 'imu': 3552, 'lidar': 3552, 'wheel': 3550}
+   initial prior     sum 0.0  median 0.000  max 0.003
+   initial imu       sum 1310716.3  median 309.497  max 2443.919
+   initial lidar     sum 0.0  median 0.000  max 0.000
+   initial wheel     sum 321.7  median 0.061  max 0.776
+   total error 1311038.0 -> 277.2
+== loop closure search on the pass-1 trajectory
+   candidates tested 5, accepted 2
+== factor graph pass 2 (with loops): states 3553; factors {'prior': 3, 'imu': 3552, 'lidar': 3552, 'wheel': 3550, 'loop': 2}
+   initial prior     sum 0.6  median 0.145  max 0.352
+   initial imu       sum 16.9  median 0.003  max 0.062
+   initial lidar     sum 181.9  median 0.037  max 0.548
+   initial wheel     sum 77.7  median 0.015  max 0.102
+   initial loop      sum 5.8  median 2.905  max 2.910
+   total error 283.0 -> 277.9
+   prior     n=    3  error mean 0.229  median 0.163  p95 0.374  max 0.397
+   imu       n= 3552  error mean 0.005  median 0.003  p95 0.015  max 0.070
+   lidar     n= 3552  error mean 0.051  median 0.037  p95 0.142  max 0.562
+   wheel     n= 3550  error mean 0.022  median 0.015  p95 0.062  max 0.102
+   loop      n=    2  error mean 0.159  median 0.159  p95 0.174  max 0.176
+   method: GTSAM factor graph: KISS-ICP lidar odometry + lidar loop closures + IMU preintegration + wheel odometry + IMU roll/pitch
+   frame: base_link
+   scans: 3553
+   keyframes: 132
+   imu_factors: True
+   wheel_factors: 3550
+   attitude_factors: 0
+   loop_factors: 2
+   magnetometer: excluded: |B| varies 28% over the run
+   imu_driver_orientation: driver orientation vs accelerometer gravity at rest: 84.5 deg -> EXCLUDED (inconsistent convention)
+   wheel_scale_applied: 0.9564027715857537
+   extrinsic_checks: {'lidar_yaw': {'lidar_travel_m': 2.832378545930508, 'wheel_travel_m': 3.000105545206807, 'yaw_correction_deg': 179.6105677901836, 'scans_used': 181, 'applied': True}, 'imu_axes': {'yaw_rate_corr': 0.9908049123859891, 'fwd_acc_corr': 0.06390492289527984}}
+   T_base_lidar_used: [[0.00670049734037334, -0.9999775514157263, 0.0, 0.26067999999999997], [0.9999775514157263, 0.00670049734037334, 0.0, -0.00325], [0.0, 0.0, 1.0, 0.45840000000000003], [0.0, 0.0, 0.0, 1.0]]
+   T_base_imu_used: [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.16], [0.0, 0.0, 0.0, 1.0]]
+   validation_only: /platform/odom/filtered, /tf odom->base_link, /imu/rpy, /platform/joint_states
+   camera_topics_read: none
+   path_length_m: 65.61476224843545
+   end_to_start_m: 3.696904579733415
+   z_range_m: 0.34161767739800086
+   fused_vs_frontend_max_shift_m: 2.4739957233176835
+   loop_fitness_after_fusion_median: 0.4118608914622038
+   loop_rmse_after_fusion_median_m: 0.10641462580354231
+   graph_error_initial: 283.04254661617585
+   graph_error_final: 277.8672348693288
+   rest_end_s: 2.534656449
+   gyro_bias_rest: [-0.0014686879304489616, -0.002169317933959228, 0.0004809575351593003]
+   acc_rest_norm: 9.5781374900387
+   scan_time_minus_header_ms_median: 49.902839
+   kiss_voxel_m: 0.4
+   range_m: [1.0, 40.0]
+   runtime_s: 45.31946349143982
